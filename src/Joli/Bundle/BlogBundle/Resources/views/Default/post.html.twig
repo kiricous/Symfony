@@ -1,0 +1,13 @@
+Voici la liste des article :<br><br>
+<table>
+	
+		{% for p in post %}           
+		    <tr>
+		    	titre : <a href="../post/{{ p.id }}">{{ p.title }}</a><br>
+		    	content : {{ p.content }}<br><br><br><br>
+		    </tr>
+		{% endfor %}
+
+</table>
+
+<a href="../blog_post/">Poster un article</a>

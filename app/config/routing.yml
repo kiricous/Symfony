@@ -1,0 +1,40 @@
+joli_blog:
+    resource: "@JoliBlogBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+test_world:
+    pattern: /test/{username}
+    defaults: { _controller: JoliBlogBundle:Default:hello }
+
+calc_add:
+    pattern: /adition/{nb1}+{nb2}
+    defaults: { _controller: JoliBlogBundle:Default:add }
+
+current_time:
+    pattern: /current-time/
+    defaults: { _controller: JoliBlogBundle:Default:current }
+
+square:
+    pattern: /square/{nb}
+    defaults: { _controller: JoliBlogBundle:Default:square }
+
+blog:
+    pattern: /blog/
+    defaults: { _controller: JoliBlogBundle:Default:listAll }
+
+blog_post:
+    pattern: /blog_post/
+    defaults: { _controller: JoliBlogBundle:Default:Post }
+
+post_success:
+    pattern: /post_success/
+    defaults: { _controller: JoliBlogBundle:Default:Post }
+
+# blog_list:
+#     pattern: /blog_list/
+#     defaults: { _controller: JoliBlogBundle:Default:listAll }
+
+blog_listById:
+    pattern: /post/{id}
+    defaults: { _controller: JoliBlogBundle:Default:listById }
